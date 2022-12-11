@@ -1,0 +1,6 @@
+[libraries]
+[header]
+[footer]
+[definitions]
+[objects]
+# generated .o files will be appended here by makefile script
