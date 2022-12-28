@@ -15,6 +15,34 @@
 
 ## Prerequisites
 
+### Using toolkit-sms Docker image
+
+A Docker image is available at https://hub.docker.com/repository/docker/retcon85/toolkit-sms
+
+`docker pull retcon85/toolkit-sms`
+
+The entrypoint is `bash`, and although it is possible to simply `docker run retcon85/toolkit-sms`, I recommend setting up an alias function in your shell to run individual commands,
+
+e.g. a zsh function, to go into `~/.zshrc`:
+
+```
+export SMS_HOME="/Users/<your_username>/<your-sms-projects-folder>/"
+# User settings
+function sms() {
+  TMPVAR=$@;
+  docker run --rm -it -v $SMS_HOME:/home/root/host/$SMS_HOME -w /home/root/host/$(pwd) retcon85/toolkit-sms -c $TMPVAR
+}
+```
+
+This will then allow you to run commands like `sms make` directly from your project folders.
+
+**Note:** this Docker image has currently only been tested under MacOS, although it would be expected to work under Linux also.
+
+or
+
+### Installing dependencies manually
+
+
 - [WLA-DX](https://github.com/vhelin/wla-dx)
 - [GNU Make](https://www.gnu.org/software/make/)
 
