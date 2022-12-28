@@ -15,9 +15,9 @@
 
 ## Prerequisites
 
-### Using toolkit-sms Docker image (recommended)
+### Using toolchain-sms Docker image (recommended)
 
-See [here](https://github.com/retcon85/toolkit-sms/blob/main/README.md#usage) for instructions on pulling and using the image.
+See [here](https://github.com/retcon85/toolchain-sms/blob/main/README.md#usage) for instructions on pulling and using the image.
 
 **Note:** this Docker image has currently only been tested under MacOS, although it would be expected to work under Linux also.
 
